@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Online Bookstore</h1>
+        <div class="cart">
+            <button id="view-cart" onclick="viewCart()">View Cart (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="book-container" id="book-list">
+            <div class="book-item">
+                <img src="image/things.jfif" alt="Book 1">
+                <h2>things fall apart</h2>
+                <p>Price: $10</p>
+                <button onclick="addToCart('things fall apart', 10)">Add to Cart</button>
+            </div>
+            <div class="book-item">
+                <img src="image/arrow.jfif" alt="Book 2">
+                <h2>arrow of god</h2>
+                <p>Price: $15</p>
+                <button onclick="addToCart('arrow of god', 15)">Add to Cart</button>
+            </div>
+            <div class="book-item">
+                <img src="image/purple.jfif" alt="Book 3">
+                <h2>purple hibiscus</h2>
+                <p>Price: $20</p>
+                <button onclick="addToCart('purple hibiscus', 20)">Add to Cart</button>
+            </div>
+            <div class="book-item">
+                <img src="image/there.jfif" alt="Book 4">
+                <h2>there was a country</h2>
+                <p>Price: $25</p>
+                <button onclick="addToCart('there was a country', 25)">Add to Cart</button>
+            </div>
+            <div class="book-item">
+                <img src="image/half.jfif" alt="Book 5">
+                <h2>half of a yellow sun</h2>
+                <p>Price: $30</p>
+                <button onclick="addToCart('half of a yellow sun', 30)">Add to Cart</button>
+            </div>
+            <div class="book-item">
+                <img src="image/samankwe.png" alt="Book 6">
+                <h2>samankwe and the highway rubbers</h2>
+                <p>Price: $35</p>
+                <button onclick="addToCart('samankwe and the highway robbers', 35)">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Shopping Cart</h2>
+            <ul id="cart-list"></ul>
+            <button onclick="borrowBooks()">Borrow Books</button>
+        </div>
+    </div>
+
+    <script src="js/booksore.js"></script>
+</body>
+</html>
